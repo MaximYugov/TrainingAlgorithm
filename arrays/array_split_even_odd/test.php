@@ -1,3 +1,5 @@
+<?php
+
 require_once __DIR__ . "/function.php";
 
 function assertEquals(mixed $actual, mixed $expected): void
