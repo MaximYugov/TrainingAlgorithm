@@ -9,15 +9,13 @@
  */
 function array_split_even_odd(array $array): array
 {
-    $result = [];
-
     $index = 0;
     $previousIsInSameGroup = true;
+    $result[$index][] = $array[0];
 
-    for ($i = 0; $i < count($array); $i++) {
-        if ($i > 0) {
-            $previousIsInSameGroup = ($array[$i] % 2 == $array[$i - 1] % 2) ? true : false;
-        }
+    for ($i = 1; $i < count($array); $i++) {
+        $previousIsInSameGroup = $array[$i] % 2 == $array[$i - 1] % 2 ? true : false;
+        
         if ($previousIsInSameGroup) {
             $result[$index][] = $array[$i];
         } else {
