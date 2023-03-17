@@ -9,6 +9,10 @@
  */
 function array_split_even_odd(array $array): array
 {
+    if (empty($array)) {
+        return [];
+    }
+
     $index = 0;
     $previousIsInSameGroup = true;
     $result[$index][] = $array[0];
