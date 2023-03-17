@@ -1,2 +1,2 @@
-# TrainingAlgorithm
-Practicing programming in PHP
+# Training Algorithms
+Practicing programming in PHP implementing different functions.
