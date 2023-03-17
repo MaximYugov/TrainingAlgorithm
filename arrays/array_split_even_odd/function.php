@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Function returns new array with unsigned integers divided into separate groups (arrays).
+ * Function returns array with integers divided into separate groups.
  * Condition of separation is whether it odd or even
  * 
  * @param array $array List of unsigned integers
