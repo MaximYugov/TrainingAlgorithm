@@ -17,12 +17,10 @@ function array_split_even_odd(array $array): array
     $result[$index][] = $array[0];
 
     for ($i = 1; $i < count($array); $i++) {
-        if ($array[$i] % 2 == $array[$i - 1] % 2) {
-            $result[$index][] = $array[$i];
-        } else {
+        if (($array[$i] + $array[$i - 1]) % 2 == 1) {
             $index++;
-            $result[$index][] = $array[$i];
-        };
+        }
+        $result[$index][] = $array[$i];
     }
 
     return $result;
