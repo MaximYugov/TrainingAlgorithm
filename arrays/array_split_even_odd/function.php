@@ -14,18 +14,15 @@ function array_split_even_odd(array $array): array
     }
 
     $index = 0;
-    $previousIsInSameGroup = true;
     $result[$index][] = $array[0];
 
     for ($i = 1; $i < count($array); $i++) {
-        $previousIsInSameGroup = $array[$i] % 2 == $array[$i - 1] % 2 ? true : false;
-        
-        if ($previousIsInSameGroup) {
+        if ($array[$i] % 2 == $array[$i - 1] % 2) {
             $result[$index][] = $array[$i];
         } else {
             $index++;
             $result[$index][] = $array[$i];
-        }
+        };
     }
 
     return $result;
