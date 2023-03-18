@@ -13,14 +13,13 @@ function array_split_even_odd(array $array): array
         return [];
     }
 
-    $index = 0;
-    $result[$index][] = $array[0];
+    $result = [[$array[0]]];
 
     for ($i = 1; $i < count($array); $i++) {
         if (($array[$i] + $array[$i - 1]) % 2 == 1) {
-            $index++;
+            array_push($result, []);
         }
-        $result[$index][] = $array[$i];
+        $result[array_key_last($result)][] = $array[$i];
     }
 
     return $result;
