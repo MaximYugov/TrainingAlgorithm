@@ -9,7 +9,7 @@
  */
 function array_split_even_odd(array $array): array
 {
-    if (empty($array)) {
+    if (count($array) < 2) {
         return [];
     }
 
