@@ -10,7 +10,7 @@
 function array_split_even_odd(array $array): array
 {
     if (count($array) < 2) {
-        return [];
+        return $array;
     }
 
     $result = [[$array[0]]];
